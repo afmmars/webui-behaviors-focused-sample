@@ -1,0 +1,78 @@
+body {
+    padding: 24px
+}
+
+.container {
+    min-width: 704px;
+}
+
+.white-text {
+    color: white;
+}
+
+.white-text md-icon {
+    color: white;
+}
+
+.marked-text {
+    background-color: rgba(0, 0, 0, 0.16); 
+    border-radius: 2px; 
+    padding: 4px
+}
+
+.left-list-container {
+    display: inline-block; 
+    margin-left: 0px; 
+    width: calc(50% - 30px);
+}   
+
+.right-list-container {
+    display: inline-block; 
+    margin-right: 0px;
+    width: calc(50% - 30px);
+}   
+
+.div-box {
+    line-height: 48px;
+    vertical-align: middle;
+    height: 48px;
+}
+
+.tile-footer {
+    padding: 0px 16px 16px 16px;    
+}
+
+.tile-group {
+    display: inline-block;
+}
+
+.tile-margin {
+    margin-right: 8px;
+}
+
+.tile-group-margin {
+    margin-right: 24px;
+}
+
+.tile {
+    height: 100px; 
+    width: 100px; 
+    background-color: rgba(0, 0, 0, 0.16); 
+    text-align: center;
+    line-height: 84px;
+    padding-top: 8px;
+ }
+
+ .tile-button {
+     height: 65px; 
+     width: 65px
+ }
+
+ .tile-text {
+     width: 80px; 
+     text-align: center;
+ }
+
+ p { 
+     line-height: 24px;
+ }
