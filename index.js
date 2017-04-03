@@ -12,17 +12,40 @@ function pipSampleController($scope, $timeout, pipShortcuts) {
     $scope.collection = [
         {
             id: 1,
-            text: '1'
+            text: 'Element 1'
         },
         {
             id: 2,
-            text: '2'
+            text: 'Element 2'
         },
         {
             id: 3,
-            text: '4'
+            text: 'Element 3'
         },
+        {
+            id: 4,
+            text: 'Element 4'
+        },
+        {
+            id: 5,
+            text: 'Element 5'
+        },   
+        {
+            id: 6,
+            text: 'Element 6'
+        }     
     ];
+
+    $scope.chooseElement = function(item) {
+        console.log('chooseElement');
+    }
+
+    $scope.onKeyPress = function(event, action) {
+        if (event.keyCode === 13) {
+            console.log('onKeyPress', action);
+        } 
+    }    
+   
 }
 
 

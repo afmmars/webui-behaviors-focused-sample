@@ -41,14 +41,13 @@
                     <md-list-item class="pip-focusable div-box" tabindex="-1">Not focusable element</md-list-item>
                 </md-list>
             </md-card>
-            <md-card class="right-list-container" pip-focused pip-focused-opacity="true" pip-focused-data="collection">
+            <md-card class="right-list-container" pip-focused pip-focused-opacity="true"  pip-focused-tabindex="0" 
+                    pip-focused-rebind="true" pip-focused-data="collection"  >
                 <md-list>
-                    <md-list-item class="pip-focusable div-box" tabindex="0">Focusable element</md-list-item>
-                    <md-list-item class="pip-focusable div-box" tabindex="-1">Not focusable element</md-list-item>
-                    <md-list-item class="pip-focusable div-box" tabindex="-1">Not focusable element</md-list-item>
-                    <md-list-item class="pip-focusable div-box" tabindex="-1">Not focusable element</md-list-item>
-                    <md-list-item class="pip-focusable div-box" tabindex="-1">Not focusable element</md-list-item>
-                    <md-list-item class="pip-focusable div-box" tabindex="-1">Not focusable element</md-list-item>
+                    <md-list-item class="pip-focusable div-box" ng-repeat="item in collection track by item.id" tabindex="-1" 
+                            ng-click="chooseElement(item)">
+                        {{item.text}}
+                    </md-list-item>
                 </md-list>
             </md-card>
         </md-card-content>
@@ -58,10 +57,10 @@
                 <div class="tile-group tile-group-margin" pip-focused pip-focused-color="'#EF6C00'" pip-focused-class="'white-text'" >
                     <p>Button Group1</p>
                     <div class="layout-row layout-align-start-start">
-                        <div class="tile tile-margin pip-focusable" tabindex="0">
+                        <div class="tile tile-margin pip-focusable" tabindex="0" ng-keypress="onKeyPress($event, 'Added')">
                             <span class="flex tile-text">Added</span>
                         </div>
-                        <div class="tile pip-focusable" tabindex="-1">
+                        <div class="tile pip-focusable" tabindex="-1" ng-keypress="onKeyPress($event, 'Deleted')">
                             <span class="flex tile-text">Deleted</span>
                         </div>
                     </div>
@@ -70,10 +69,10 @@
                 <div class="tile-group tile-group-margin" pip-focused pip-focused-color="'#43A047'" pip-focused-class="'white-text'">
                     <p>Button Group2:</p>
                     <div class="layout-row layout-align-start-start">
-                        <div class="tile tile-margin pip-focusable" tabindex="0">
+                        <div class="tile tile-margin pip-focusable" tabindex="0" ng-keypress="onKeyPress($event, 'Picture')">
                             <span class="flex tile-text">Picture</span>
                         </div>
-                        <div class="tile pip-focusable" tabindex="-1">
+                        <div class="tile pip-focusable" tabindex="-1" ng-keypress="onKeyPress($event, 'Video')">
                             <span class="flex tile-text">Video</span>
                         </div>
                     </div>
@@ -82,10 +81,10 @@
                 <div class="tile-group" pip-focused pip-focused-color="'#03A9F4'" pip-focused-class="'white-text'">
                     <p>Button Group3</p>
                     <div class="layout-row layout-align-start-start">
-                        <div class="tile tile-margin pip-focusable" tabindex="0">
+                        <div class="tile tile-margin pip-focusable" tabindex="0" ng-keypress="onKeyPress($event, 'When')">
                             <span class="flex tile-text">When</span>
                         </div>
-                        <div class="tile pip-focusable" tabindex="-1">
+                        <div class="tile pip-focusable" tabindex="-1" ng-keypress="onKeyPress($event, 'Where')">
                             <span class="flex tile-text">Where</span>
                         </div>
                     </div>
